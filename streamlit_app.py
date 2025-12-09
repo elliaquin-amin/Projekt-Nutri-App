@@ -55,8 +55,8 @@ class PainelAlimentos:
             st.session_state["edit_id"] = None
     def cadastrar(self):
         st.subheader("📝 Cadastro de Alimentos")
-        # ✔ RF03 — Permitir cadastro visual dos alimentos
-        # ✔ RF04 — Exibir campos nutricionais
+        # ✔ RF03 — Permite o cadastro visual dos alimentos
+        # ✔ RF04 — Exibe os campos nutricionais
         with st.form("form_cadastro", clear_on_submit=True):
             nome = st.text_input("Nome do alimento")
             grupo = st.selectbox(
@@ -88,7 +88,7 @@ class PainelAlimentos:
             st.info("Nenhum alimento cadastrado ainda.")
             return
 
-        # ✔ RF05 — Interface clara para edição
+        # ✔ RF05 — Interface
         nomes = [a.nome for a in alimentos]
 
         idx = st.selectbox("Selecione para editar:", range(len(nomes)),
